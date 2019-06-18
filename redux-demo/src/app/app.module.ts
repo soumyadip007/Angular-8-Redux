@@ -12,7 +12,7 @@ import { IAppState , rootReducer} from './store';
   ],
   imports: [
     BrowserModule,
-    NgModule
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
