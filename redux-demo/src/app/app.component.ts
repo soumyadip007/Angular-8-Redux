@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgRedux } from 'ng2-redux';
 import { IAppState } from './store';
 import { VirtualTimeScheduler } from 'rxjs';
+import { INCREMENT } from './action';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,6 @@ export class AppComponent {
   }
 
   increment(){
-    this.ngRedux.dispatch({type: 'INCREMENT'});
+    this.ngRedux.dispatch({type: INCREMENT});
   }
 }
