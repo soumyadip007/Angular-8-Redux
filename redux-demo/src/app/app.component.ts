@@ -10,7 +10,7 @@ import { fromJS, Map } from 'immutable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'redux-demo';
+  title = 'Angular-Redux';
 
  // counter=0;
 

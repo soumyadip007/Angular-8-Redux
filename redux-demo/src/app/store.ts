@@ -21,9 +21,9 @@ export function rootReducer(state : IAppState, action): IAppState{
     switch(action.type)
    {
        case INCREMENT:
-        // return  Object.assign({}, state, {counter : state.counter +1,isOnline : true});
-       // : return {counter: state.counter+1};
-       // return state.set('couter',state.get('counter')+1);
+    //     return  Object.assign({}, state, {counter : state.counter +1,isOnline : true});
+    //    : return {counter: state.counter+1};
+    //    return state.set('couter',state.get('counter')+1);
       
     state.counter++;
        return tassign(state, {counter : state.counter +1});
