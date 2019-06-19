@@ -1,5 +1,6 @@
 <h1>
   {{title}}
 </h1>
-<p>Counter : {{counter  }}</p>
+<p>Counter : {{counter |async  }}</p>
 <button (click)="increment()">Increment</button>
+<p>Counter : {{counter  }}</p>
