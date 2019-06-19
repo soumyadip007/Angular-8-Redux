@@ -16,6 +16,8 @@ export class AppComponent {
   constructor(private ngRedux : NgRedux<IAppState>)
   {
       ngRedux.subscribe(()=>{
+        var store=ngRedux.getState();
+        this.counter=store.counter;
         console.log(ngRedux.getState());
       });
   }
