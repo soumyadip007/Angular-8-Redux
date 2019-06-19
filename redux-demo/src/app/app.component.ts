@@ -11,17 +11,17 @@ import { INCREMENT } from './action';
 export class AppComponent {
   title = 'redux-demo';
 
-  //counter=0;
+  counter=0;
 
-  @select('counter') count;
+  //@select('counter') counter;
 
   constructor(private ngRedux : NgRedux<IAppState>)
   {
-      // ngRedux.subscribe(()=>{
-      //   var store=ngRedux.getState();
-      //   this.counter=store.counter;
-      //   console.log(ngRedux.getState());
-      // });
+      ngRedux.subscribe(()=>{
+        var store=ngRedux.getState();
+        this.counter=store.counter;
+        console.log(ngRedux.getState());
+      });
   }
 
   increment(){
