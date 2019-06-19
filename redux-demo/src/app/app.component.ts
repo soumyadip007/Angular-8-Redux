@@ -12,10 +12,29 @@ import { fromJS, Map } from 'immutable';
 export class AppComponent {
   title = 'redux-demo';
 
-  //counter=0;
+ // counter=0;
+
+  //newMessages=0;
+ // @select(s=>s.get('counter')) counter;
   @select('counter') count;
-  constructor(private ngRedux: NgRedux<IAppState>) {}
-  increment() {
-      this.ngRedux.dispatch({ type: INCREMENT });
+
+ constructor(private ngRedux : NgRedux<IAppState>)
+ //constructor(private ngRedux : NgRedux<Map<string,any>>)
+   {
+      // ngRedux.subscribe(()=>{
+      //   var store=ngRedux.getState();
+      //   this.counter=store.counter;
+      //   console.log(ngRedux.getState());
+
+        // store=ngRedux.getState();
+        // this.newMessages=store.messaging.newMessages;
+        // console.log(ngRedux.getState());
+        
+
+  //     });
+   }
+
+  increment(){
+    this.ngRedux.dispatch({type: INCREMENT});
   }
 }
