@@ -12,9 +12,12 @@ import { INCREMENT } from './action';
 export class AppComponent {
   title = 'redux-demo';
 
+  counter=0;
   constructor(private ngRedux : NgRedux<IAppState>)
   {
-
+      ngRedux.subscribe(()=>{
+        console.log(ngRedux.getState());
+      });
   }
 
   increment(){
