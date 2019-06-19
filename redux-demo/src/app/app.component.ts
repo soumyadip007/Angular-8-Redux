@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgRedux } from 'ng2-redux';
+import { IAppState } from './store';
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'redux-demo';
+
+  constructor(private ngRedux : NgRedux<IAppState>)
+  {
+
+  }
+
+  increment(){
+    this.ngRedux.dispatch({type: 'INCREMENT'});
+  }
 }
