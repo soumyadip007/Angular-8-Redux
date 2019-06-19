@@ -11,8 +11,7 @@ import { IAppState , rootReducer, INITIAL_STATE} from './store';
   ],
   imports: [
     BrowserModule,
-    NgReduxModule,
-    NgModule
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
