@@ -13,6 +13,7 @@ export class AppComponent {
 
   counter=0;
 
+  newMessages=0;
   //@select('counter') counter;
 
   constructor(private ngRedux : NgRedux<IAppState>)
@@ -21,6 +22,12 @@ export class AppComponent {
         var store=ngRedux.getState();
         this.counter=store.counter;
         console.log(ngRedux.getState());
+
+        store=ngRedux.getState();
+        this.newMessages=store.messaging.newMessages;
+        console.log(ngRedux.getState());
+        
+
       });
   }
 
