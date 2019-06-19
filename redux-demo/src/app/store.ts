@@ -15,7 +15,7 @@ export const INITIAL_STATE : IAppState={
     //     newMessages:5,
     // }
 }
-
+ //  export function rootReducer(state : Map<string,any>, action): Map<string,any>{
 export function rootReducer(state : IAppState, action): IAppState{
    
     switch(action.type)
@@ -23,13 +23,13 @@ export function rootReducer(state : IAppState, action): IAppState{
        case INCREMENT:
         // return  Object.assign({}, state, {counter : state.counter +1,isOnline : true});
        // : return {counter: state.counter+1};
+       // return state.set('couter',state.get('counter')+1);
+      
     state.counter++;
        return tassign(state, {counter : state.counter +1});
    }
     return state;
 
-  //  export function rootReducer(state : Map<string,any>, action): Map<string,any>{
-
-         // return state.set('couter',state.get('counter')+1);
-      
+ 
+         
 }
